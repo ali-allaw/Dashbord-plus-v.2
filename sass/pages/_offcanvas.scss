@@ -1,0 +1,110 @@
+.offcanva {
+    width: 250px;
+    height: 109vh !important;
+    li {
+        margin-top: 5px;
+        a {
+            font-size: 22px;
+        }
+        i {
+            font-size: 22px;
+            margin-top: 4px;
+        }
+    }
+    .title {
+        position: relative;
+        h2 {
+            position: relative;
+            &::after, &::before {
+                content: "";
+                position: absolute;
+                width: 50%;
+                border-top: 3px solid black;
+                bottom: -20px;
+            }
+            &::after {
+                left: -10px;
+            }
+            &::before {
+                right: -10px;
+            }
+        }
+        span {
+            background-color: black;
+            width: 15px;
+            height: 15px;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 180%);
+        }
+    }
+    ul {
+        width: 90%;
+        li {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 15px; 
+            border-radius: 5px;
+            padding: 5px 15px;
+            width: 100%;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            p {
+                display: inline-block;
+                padding: 0px !important;
+                margin: 0px !important;
+            }
+            i {
+                font-size: 18px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+            &:hover {
+                background-color: #f7f7f7;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px ) {
+    .offcanva {
+        width: 62px;
+        p {
+            display: none !important;
+        }
+        ul {
+            margin-top: 0px !important;            
+            li {
+                a {
+                    margin: 0px !important;
+                    padding-right: 50px !important;
+                }
+                padding: 10px 25px;
+                transform: translateX(-35%);
+                i {
+                    position: relative;
+                    left: -10px;
+                }
+            }
+        }
+        .title {
+            h2 {
+                font-size: 18px !important;
+                &::before, &::after {
+                    display: none;
+                }
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+    
+}
